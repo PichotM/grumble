@@ -356,7 +356,7 @@ func (server *Server) RemoveClient(client *Client, kicked bool) {
 			Session: proto.Uint32(client.Session()),
 		})
 		if err != nil {
-			server.Panic("Unable to broadcast UserRemove message for disconnected client.")
+			server.Printf("Unable to broadcast UserRemove message for disconnected client.")
 		}
 	}
 }
