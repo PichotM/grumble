@@ -556,7 +556,7 @@ func (server *Server) handleUserStateMessage(client *Client, msg *Message) {
 
 	actor, ok := server.clients[client.Session()]
 	if !ok {
-		server.Panic("Client not found in server's client map.")
+		// server.Panicf("Client not found in server's client map.")
 		return
 	}
 	target := actor
